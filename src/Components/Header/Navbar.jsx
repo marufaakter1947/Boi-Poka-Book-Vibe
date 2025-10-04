@@ -3,7 +3,8 @@ import React from 'react';
 const Navbar = () => {
     const links = <>
     <li className='m-2'>Home</li>
-    <li className='m-2'>About</li>
+    <li className='m-2'>Listed Books</li>
+    <li className='m-2'>Pages to Read</li>
     </>
     return (
        <div className="navbar bg-base-100 shadow-sm">
@@ -18,7 +19,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
+    <a className="btn btn-ghost text-[28px] font-bold">Book Vibe</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -26,7 +27,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    <a className="btn mr-4  font-semibold text-[18px] text-white bg-[#23be0a]">Sign In</a>
+    <a className="btn  font-semibold text-[18px] text-white bg-[#59c6d2]">Sign Up</a>
   </div>
 </div>
     );
