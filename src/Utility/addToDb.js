@@ -16,6 +16,9 @@ if(storedBookData.includes(id)){
 }
 else{
     storedBookData.push(id);
-    console.log(storedBookData);
+    // console.log(storedBookData);
+    const data = JSON.stringify(storedBookData);
+    localStorage.setItem("readList", data)
 }
 }
+export {addToStoredDB,getStoredBook};

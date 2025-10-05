@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import { addToStoredDB } from "../../Utility/addToDb";
 
 const BookDetails = () => {
   const { id } = useParams();
@@ -24,7 +25,7 @@ const BookDetails = () => {
 
   const handleMarkAsRead = (id) =>{
     // store data in localstorage in array or collection if already exist show alert and not exist then push in the collection of  array.
-    
+addToStoredDB(id);
   }
   return (
     <div className="mt-13 mb-20 flex  gap-12">
@@ -73,7 +74,7 @@ const BookDetails = () => {
         </div>
        </div>
        <div>
-        <button className="btn mr-4">Mark as Read</button>
+        <button onClick={() =>handleMarkAsRead(id)} className="btn mr-4">Mark as Read</button>
         <button className="btn bg-[#50b1c9] text-white">Add To Wishlist</button>
        </div>
       </div>
